@@ -1,41 +1,107 @@
 ---
-import Layout from '../components/Layout.astro';
-import Background from '../components/Background.astro';
+title: Welcome to the Disguise User Guide
+description: User Guide Platform
+template: splash
 ---
 
-<Layout title="Astro Quickstart">
-	<main>
-   <Background />
-    <div id="content">
-      <div class="header">
-        <h1>Quickstart Template</h1>
-        <div class="logo">
-          <img src="https://user-images.githubusercontent.com/43764894/223559085-8ff69d2f-4247-427f-a3a6-d2036b00082a.png" alt="Netlify plus Astro banner">
-        </div>
-        <h2>
-          This is a bare-bones Astro project that has everything you need to quickly deploy it to Netlify
-        </h2>
-        <div class="btns">
-          <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/astro-quickstart" class="btn primary">Deploy to Netlify</a>
-          <a href="https://github.com/netlify-templates/astro-quickstart" class="btn secondary">View Repo</a>
-        </div>
-      </div>
-			<div class="resource-list">
-        <ul>
-          <li>
-            <a href="https://ntl.fyi/38O9wmY">Netlify Blog: Astro posts</a>
-					</li>
-          <li>
-            <a href="https://developers.netlify.com/guides/tag/astro/">Netlify DevHub: Astro Guides</a>
-					</li>
-          <li>
-            <a href="https://ntl.fyi/3KHGtyz">Netlify Docs</a>
-          </li>
-          <li>
-            <a href="https://docs.astro.build/en/getting-started/">Astro Docs</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-	</main>
-</Layout>
+import { Card, CardGrid } from "@astrojs/starlight/components";
+import { LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="About" icon="information">
+    - What is [Disguise](/about/about-disguise)?
+    - Learn about the new [User Guide platform](/about/user-guide).
+  </Card>
+  <Card title="What's New?" icon="star">
+    - Read about the latest [Designer release](designer/whats-new/r30). 
+
+    Check out our new documentation:
+    - [Network Status Widget](/designer/networking/network-status-widget)
+    - [Network Best Practices](/designer/networking/d3net-overview)
+    - [Failover](/designer/networking/failover)
+    - [Expressions](/designer/configuration/expressions/overview)
+    - [SMC](/hardware/smc/smc-overview)
+    - [OmniCal Setup](/workflows/calibration-projection/omnical-setup)
+    - [xR for VR](/workflows/xr/xr-for-vr)
+  </Card>
+    <Card title="Designer" icon="rocket">
+    - [Getting Started](/designer/getting-started/designer)
+    - [Manager](/designer/manager/overview)
+    - [GUI](/designer/ui/designer-user-interface)
+    - [Stage Setup](designer/stage-setup/stage-setup-overview)
+    - [Content Management](/designer/content-management/content-management-overview)
+    - [Layers](/designer/layers/layers-overview)
+    - [Timeline, Tracks and Transports](/designer/timeline-tracks-transports/timeline)
+    - [Content Mapping](/designer/mapping/content-mapping-overview)
+    - [Devices](/designer/devices/devices-overview)
+    - [Feed Outputs](/designer/feed-outputs/feed-outputs-overview)
+    - [Networking](/designer/networking/networking-overview)
+    - [APIs](/designer/apis/api-overview)
+    - [Audio](/designer/audio/overview)
+    - [Configuration](/designer/configuration/expressions/overview)
+    - [Colour Management](/designer/colour-management/colour-management-overview)
+  </Card>
+  <Card title="Hardware" icon="heart">
+    - [Hardware Ranges](/hardware/hardware-ranges-overview)
+    - [EX Range](/hardware/ex-range/ex-range-overview)
+    - [VX Range](/hardware/pro-range/vx-range/vx-range-overview)
+    - [GX Range](hardware/gx-range/gx-range-overview)
+    - [Legacy Servers](/hardware/legacy/legacy-servers-overview)
+    - [SMC](/hardware/smc/smc-overview)
+    - [Fabric](/hardware/fabric/fabric-overview)
+    - [VFC Cards](/hardware/vfc-cards/vfc-cards-overview)
+    - [IP-VFC Cards](/hardware/ip-vfc/ip-vfc-overview)
+    - [Filter Maintenance](/hardware/filter-maintenance)
+  </Card>
+  <Card title="RenderStream" icon="seti:pipeline">
+    - [RenderStream](/workflows/renderstream/renderstream-overview)
+    - [Notch Integration](/workflows/renderstream/notch/renderstream-notch)
+    - [Touch Designer Integration](/workflows/renderstream/touch-designer/renderstream-touch-designer)
+    - [Unity Integration](workflows/renderstream/unity/renderstream-unity)
+    - [Unreal Engine Integration](/workflows/renderstream/unreal-engine/renderstream-unreal)
+  </Card>
+  <Card title="Workflows" icon="laptop">
+    - [3D Modelling](/workflows/3d-modelling/3d-fundamentals)
+    - [AR](/workflows/ar/ar-overview)
+    - [Calibration Projection](/workflows/calibration-projection/projector-calibration-overview)
+    - [DMX](/workflows/dmx/dmx-overview)
+    - [ISAAC Bridge](/workflows/isaac-bridge/isaac-bridge)
+    - [OSC](workflows/osc/osc-workflows-overview)
+    - [Motion Capture](/workflows/motion-capture/motion-capture-overview)
+    - [NeRFs](/workflows/nerfs/volinga)
+    - [Virtual Production](/workflows/vp/virtual-production)
+    - [UV Mapping](/workflows/3d-modelling/uv-mapping/uv-mapping-overview)
+    - [VR](/workflows/virtual-reality/virtual-reality-overview)
+    - [xR](/workflows/xr/xr-overview)
+  </Card>
+  <Card title="Cloud" icon="sun">
+     - [Disguise Cloud](/cloud/cloud-overview)
+     - [Dashboard](/cloud/cloud-dashboard/cloud-dashboard)
+     - [Drive](/cloud/disguise-drive/using-drive)
+     - [Mapping Matter](/cloud/mapping-matter/introduction)
+     - [Previz](/cloud/previz/about-previz)
+  </Card>
+  <Card title="Porta" icon="moon">
+   - [Porta Documentation](/porta/porta-docs)
+   - [Porta 2.0](/porta/porta-2-0)
+   - [Porta 2.1](/porta/porta-2-1)
+   - [Porta 2.2](/porta/porta-2-2)
+   - [Porta 2.3](/porta/porta-2-3)
+   - [Porta 2.4](/porta/porta-2-4)
+  </Card>
+  <Card title="PDFs" icon="document">
+    For our PDF guides see this [page](/pdfs/overview).
+  </Card>
+  <Card title="Video Playback Performance" icon="seti:video">
+    - Read about and download [Video Codecs](/designer/content-management/video-codecs/video-codec-overview).
+    - Compare [Machine Performance](hardware/performance/machine-performance) results.
+  </Card>
+</CardGrid>
+<LinkCard title="Download Designer" href="https://download.disguise.one/#download" />
+<LinkCard title="Download a Hardware OS" href="https://download.disguise.one/#hardware" />
+<LinkCard title="Go to our Resources Page" href="https://download.disguise.one/#resources" />
+<LinkCard title="Find RenderStream Plugins" href="https://github.com/disguise-one" />
+<LinkCard title="Explore the Developer Portal" href="https://github.com/disguise-one" />
+
+
+
